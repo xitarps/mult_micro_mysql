@@ -62,6 +62,9 @@ group :development, :test do
 
   # Syntax sugar(Tests models) - https://github.com/thoughtbot/shoulda-matchers
   gem 'shoulda-matchers', '~> 6.0'
+
+  # Fake data - https://github.com/faker-ruby/faker
+  gem 'faker'
 end
 
 group :development do
