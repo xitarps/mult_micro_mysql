@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Company, type: :model do
   describe 'associations' do
-    # it { should belong_to(:category).class_name('MenuCategory') }
+    it { should have_many(:leadership_levels) }
   end
 
   describe 'validations' do
