@@ -47,6 +47,9 @@ gem "bootsnap", require: false
 # Linter - https://github.com/rubocop/rubocop-rails
 gem 'rubocop-rails', require: false
 
+# Background processing - https://github.com/sidekiq/sidekiq
+gem 'sidekiq'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
