@@ -59,6 +59,9 @@ group :development, :test do
 
   # Models builder(tests) - https://github.com/thoughtbot/factory_bot_rails
   gem 'factory_bot_rails'
+
+  # Syntax sugar(Tests models) - https://github.com/thoughtbot/shoulda-matchers
+  gem 'shoulda-matchers', '~> 6.0'
 end
 
 group :development do
