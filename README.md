@@ -1,1 +1,19 @@
-# organizational_chart
+# Organizational Chart
+
+description to come...
+descrição por vir...
+
+
+envs:
+ - SECRET_KEY_BASE
+ - TEST_DATABASE_URL
+ - TEST_DATABASE_NAME
+ - DEV_DATABASE_URL
+ - DEV_DATABASE_NAME
+ - PROD_DATABASE_URL
+ - PROD_DATABASE_NAME
+ - SIDEKIQ_WORKERS
+ - SIDEKIQ_USER
+ - SIDEKIQ_PASSWORD=
+ - REDIS_URL
+ - RAILS_ENV
