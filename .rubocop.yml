@@ -417,3 +417,5 @@ Rails/UnusedRenderContent: # new in 2.21
   Enabled: true
 Rails/WhereRange: # new in 2.25
   Enabled: true
+Style/ClassAndModuleChildren:
+  Enabled: false
