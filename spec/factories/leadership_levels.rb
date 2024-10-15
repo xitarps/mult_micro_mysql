@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :leadership_level do
-    level { 0 }
+    level { 1 }
     company { create(:company) }
   end
 end
