@@ -56,6 +56,9 @@ group :development, :test do
 
   # Test coverage - https://github.com/simplecov-ruby/simplecov
   gem 'simplecov'
+
+  # Models builder(tests) - https://github.com/thoughtbot/factory_bot_rails
+  gem 'factory_bot_rails'
 end
 
 group :development do
