@@ -14,6 +14,15 @@ Rails.application.routes.draw do
           get 'search'
         end
       end
+
+      resources :users, only: %i[create index destroy] do
+      end
+
+      namespace :users do
+        post 'join_leader'
+        get 'managed_users'
+        get 'sub_managed_users'
+      end
     end
   end
 
