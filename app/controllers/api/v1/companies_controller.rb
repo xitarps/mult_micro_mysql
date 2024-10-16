@@ -36,6 +36,6 @@ class Api::V1::CompaniesController < Api::V1::ApplicationController
   end
 
   def company_params
-    params.require(:company).permit(:name)
+    params.require(:company).permit(:name, users_attributes: [:level, :name, :email])
   end
 end
