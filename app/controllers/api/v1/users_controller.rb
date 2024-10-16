@@ -12,7 +12,7 @@ class Api::V1::UsersController < Api::V1::ApplicationController
   end
 
   def create
-    @user = user.new(user_params)
+    @user = User.new(user_params)
     return render :show if @user.save
 
     render json: @user.errors, status: :unprocessable_entity
@@ -22,7 +22,7 @@ class Api::V1::UsersController < Api::V1::ApplicationController
     fetch_user
     return render json: {}, status: :ok if @user.destroy
 
-    render json: {}, status: :unprocessable_entity
+    render json: @user.errors, status: :unprocessable_entity
   end
 
   def joins_leader
@@ -34,7 +34,7 @@ class Api::V1::UsersController < Api::V1::ApplicationController
 
     return render json {}, status: :unprocessable_entity if @leader.nil? || @user.nil?
 
-    Users::JoinsLeaderService.call(user: @user, leader_id: @leader)
+    Users::JoinsLeaderService.call(user: @user, leader: @leader)
     render json: {}, status: :ok
   end
 
@@ -52,10 +52,15 @@ class Api::V1::UsersController < Api::V1::ApplicationController
     @users = Users::FetchSubManagedUsersService.call(leader_id: @leader.id)
   end
 
+  def peers
+    fetch_user
+    @users = User.where(user_id: @user.leader.id).where.not(id: @user.id)
+  end
+
   private
 
   def user_params
-    params.require(:user).permit(:name)
+    params.require(:user).permit(:name, :email, :company_id)
   end
 
   def fetch_user

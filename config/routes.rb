@@ -16,10 +16,13 @@ Rails.application.routes.draw do
       end
 
       resources :users, only: %i[create index destroy] do
+        member do
+          get 'peers'
+        end
       end
 
       namespace :users do
-        post 'join_leader'
+        post 'joins_leader'
         get 'managed_users'
         get 'sub_managed_users'
       end

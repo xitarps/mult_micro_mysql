@@ -1,6 +1,5 @@
 json.data do
   json.users @users do |user|
-    json.id       user.id
-    json.name     user.name
+    json.partial! 'api/v1/users/user', user: user
   end
 end

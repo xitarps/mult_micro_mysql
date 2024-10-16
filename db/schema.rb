@@ -39,6 +39,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_15_053450) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["company_id"], name: "index_users_on_company_id"
+    t.index ["email", "company_id"], name: "index_users_on_email_and_company_id", unique: true
     t.index ["leadership_level_id"], name: "index_users_on_leadership_level_id"
     t.index ["user_id"], name: "index_users_on_user_id"
   end
