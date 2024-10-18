@@ -1,8 +1,5 @@
 # Organizational Chart
-
-description to come...
-descrição por vir...
-
+README WIP
 
 envs:
  - SECRET_KEY_BASE
@@ -17,3 +14,13 @@ envs:
  - SIDEKIQ_PASSWORD=
  - REDIS_URL
  - RAILS_ENV
+
+## Api endpoints
+
+ - Insomina file(json):
+  - [Api Json file](./doc/insomnia/endpoints.json)
+
+
+## Organograma das seeds
+Ao Rodar as seeds, será gerada uma estrutura de lideres com os usuários na seguinte disposição:
+![Seeds](./doc/images/seeds_user_names.jpg)
