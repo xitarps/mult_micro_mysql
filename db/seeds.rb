@@ -3,7 +3,6 @@ if Rails.env.development?
   User.destroy_all
   Company.destroy_all
 
-
   puts '==== creating owners data ===='
   a_owner = {level: 0, name: 'A_owner', email: "a0@a.com"}
   b_owner = {level: 0, name: 'B_owner', email: "b0@b.com"}
@@ -51,35 +50,39 @@ if Rails.env.development?
   company_a = Company.first
   own_a = company_a.users.find_by(level: 0)
 
-  u1 = company_a.users.where(name: 'a1')[0]
-  u2 = company_a.users.where(name: 'a2')[0]
-  u3 = company_a.users.where(name: 'a3')[0]
-  u4 = company_a.users.where(name: 'a4')[0]
-  u5 = company_a.users.where(name: 'a5')[0]
-  u6 = company_a.users.where(name: 'a6')[0]
-  u7 = company_a.users.where(name: 'a7')[0]
-  u8 = company_a.users.where(name: 'a8')[0]
-  u9 = company_a.users.where(name: 'a9')[0]
-  u10 = company_a.users.where(name: 'a10')[0]
-  u11 = company_a.users.where(name: 'a11')[0]
-  u12 = company_a.users.where(name: 'a12')[0]
-  u13 = company_a.users.where(name: 'a13')[0]
+  a1 = company_a.users.where(name: 'a1')[0]
+  a2 = company_a.users.where(name: 'a2')[0]
+  a3 = company_a.users.where(name: 'a3')[0]
+  a4 = company_a.users.where(name: 'a4')[0]
+  a5 = company_a.users.where(name: 'a5')[0]
+  a6 = company_a.users.where(name: 'a6')[0]
+  a7 = company_a.users.where(name: 'a7')[0]
+  a8 = company_a.users.where(name: 'a8')[0]
+  a9 = company_a.users.where(name: 'a9')[0]
+  a10 = company_a.users.where(name: 'a10')[0]
+  a11 = company_a.users.where(name: 'a11')[0]
+  a12 = company_a.users.where(name: 'a12')[0]
+  a13 = company_a.users.where(name: 'a13')[0]
 
-  Users::JoinsLeaderService.call(user: u1, leader: own_a)
-  Users::JoinsLeaderService.call(user: u2, leader: u1)
-  Users::JoinsLeaderService.call(user: u3, leader: u1)
-  Users::JoinsLeaderService.call(user: u4, leader: u3)
+  Users::JoinsLeaderService.call(user: a1, leader: own_a)
+  
+  Users::JoinsLeaderService.call(user: a2, leader: a1)
+  Users::JoinsLeaderService.call(user: a3, leader: a1)
+  Users::JoinsLeaderService.call(user: a5, leader: a1)
 
-  Users::JoinsLeaderService.call(user: u5, leader: u1)
-  Users::JoinsLeaderService.call(user: u6, leader: u5)
-  Users::JoinsLeaderService.call(user: u7, leader: u5)
+  Users::JoinsLeaderService.call(user: a4, leader: a5)
+  Users::JoinsLeaderService.call(user: a6, leader: a5)
+  Users::JoinsLeaderService.call(user: a7, leader: a5)
 
-  Users::JoinsLeaderService.call(user: u8, leader: own_a)
-  Users::JoinsLeaderService.call(user: u9, leader: u8)
-  Users::JoinsLeaderService.call(user: u10, leader: u9)
-  Users::JoinsLeaderService.call(user: u11, leader: u10)
-  Users::JoinsLeaderService.call(user: u12, leader: u10)
-  Users::JoinsLeaderService.call(user: u13, leader: u10)
+  Users::JoinsLeaderService.call(user: a8, leader: own_a)
+
+  Users::JoinsLeaderService.call(user: a9, leader: a8)
+  
+  Users::JoinsLeaderService.call(user: a10, leader: a9)
+  
+  Users::JoinsLeaderService.call(user: a11, leader: a10)
+  Users::JoinsLeaderService.call(user: a12, leader: a10)
+  Users::JoinsLeaderService.call(user: a13, leader: a10)
 else
   puts '=== Not in development enviroment ==='
   puts 'skipping seeds...'
