@@ -99,6 +99,7 @@ to run it:
 ```
 ruby ./doc/ruby/concept.rb
 ```
+*obs: there's a binding to interact with it, to exit it, just type: <b>continue</b>
 
 ## Organizational chart's seeds visual abstraction
 After running seeds, the organizational chart structure will be:
