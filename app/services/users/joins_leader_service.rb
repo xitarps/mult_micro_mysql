@@ -24,14 +24,12 @@ class Users::JoinsLeaderService < ApplicationService
   end
 
   def same_company_validation
-    unless @user.company_id == @leader.company_id
-      raise "Either User and Leader must be from the same company"
-    end
+    message = 'Either User and Leader must be from the same company'
+    raise message unless @user.company_id == @leader.company_id
   end
 
   def same_user_types_validation
-    unless [@user, @leader].all?{ |object| object.is_a?(User) }
-      raise "Either User and Leader must be \'User\' type, got: #{@user.class} and #{@leader.class}" 
-    end
+    message = "Either User and Leader must be 'User' type, got: #{@user.class} and #{@leader.class}"
+    raise message unless [@user, @leader].all? { |object| object.is_a?(User) }
   end
 end
