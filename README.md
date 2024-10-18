@@ -93,6 +93,13 @@ Run rubcop:
 docker-compose exec web bash -c "rubocop"
 ```
 
+## Extra
+[First sketch of the core concept/organizational chart](./doc/ruby/concept.rb)
+to run it:
+```
+ruby ./doc/ruby/concept.rb
+```
+
 ## Organizational chart's seeds visual abstraction
 After running seeds, the organizational chart structure will be:
 ![Seeds](./doc/images/seeds_user_names.jpg)
