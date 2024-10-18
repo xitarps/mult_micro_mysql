@@ -6,7 +6,7 @@ RSpec.describe Company, type: :model do
   end
 
   describe 'validations' do
-    subject { create(:company) }
+    subject { create(:company, :full_structure) }
     it { should validate_presence_of(:name) }
   end
 end
