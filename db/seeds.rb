@@ -7,7 +7,7 @@ if Rails.env.development?
   a_owner = {level: 0, name: 'A_owner', email: "a0@a.com"}
   b_owner = {level: 0, name: 'B_owner', email: "b0@b.com"}
 
-  puts '==== creating Companiers with owners ===='
+  puts '==== creating Companies with owners ===='
   a_company = Company.new(name: 'Empresa A', users_attributes: [ a_owner ])
   b_company = Company.new(name: 'Empresa B', users_attributes: [ b_owner ])
 
