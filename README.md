@@ -8,6 +8,18 @@ This project aims on help managment of orgazational chart
 ## Project(board with cards)
 [board from github's project](https://github.com/users/xitarps/projects/7/views/1)
 
+## Critical decisions
+Some decisions has been taken due the problem's scope:
+ - A company existance requires a owner(seems not to be right to have a company withou a first user/owner)
+
+ - Sidekiq was installed but since there are no great data handling right now it's not in use, please check:
+ ```
+ docker-compose exec web bash -c "rails notes ANNOTATION=TODO"
+ ```
+ - Some code structures could offend rubucop, with that in mind, some 'smelly' code was set to fiz it and some cops went disabled... applying i18n whit yml should fix most of these problems
+ - My target about the front end of this project was to use top notch techonolies such as HotWire, but with my shortage of time, i still couldn't apply it.
+ Still react, vue etc could be integrated by adding minimal configs to docker-compose file, creating the app on the software folder and seeting up cors(rack-cors and it's configuration)
+ 
 ## ENVs
 Please before start, pay attention to <b>'env.example'</b> , adjust as your needs
 and rename it to: <b>'.env.development'</b>
