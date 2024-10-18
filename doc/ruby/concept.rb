@@ -13,10 +13,10 @@ class User
 end
 
 class Hierarchy
-  @@data = {  }
+  @@data = {}
 
   def self.lead(user: nil, lider: nil)
-    @@data = { 0 => {lider.id => lider } } if @@data.empty?
+    @@data = { 0 => { lider.id => lider } } if @@data.empty?
     return if user.level && user.level <= lider.level.to_i
 
     if user.level

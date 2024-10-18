@@ -10,7 +10,7 @@ This project aims on help managment of orgazational chart
 
 ## Critical decisions
 Some decisions has been taken due the problem's scope:
- - A company existance requires a owner(seems not to be right to have a company withou a first user/owner)
+ - A company existence requires a owner(seems not to be right to have a company withou a first user/owner)
 
  - Sidekiq was installed but since there are no great data handling right now it's not in use, please check:
  ```
