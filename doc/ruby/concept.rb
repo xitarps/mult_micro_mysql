@@ -40,7 +40,8 @@ u3 = User.new('x3')
 u4 = User.new('x4')
 u5 = User.new('x5')
 
-Dictionary.lead(user: u2, lider: u1)
-Dictionary.lead(user: u3, lider: u1)
+Hierarchy.lead(user: u2, lider: u1)
+Hierarchy.lead(user: u3, lider: u1)
+puts Hierarchy.data
 binding.irb
 puts 'a'
