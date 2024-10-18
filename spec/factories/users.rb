@@ -1,10 +1,14 @@
 FactoryBot.define do
   factory :user do
-    level { 1 }
+    level { nil }
     leadership_level { nil }
-    company_id { 1 }
+    company { nil }
     name { Faker::Name.name }
     email { Faker::Internet.email }
     user_id { nil }
+  end
+
+  trait :owner do
+    name { 'Owner - ' << Faker::Name.name }
   end
 end
