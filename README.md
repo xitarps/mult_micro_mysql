@@ -70,6 +70,10 @@ Run rspec:
 docker-compose exec web bash -c "rspec"
 ```
 *obs: test coverage can be found after running rspec on your browser on ./coverage/index.html
+* if the page style seems weir is due permission issues, please run:
+```
+sudo chown -R ${USER}:${USER} ./coverage/
+```
 
 ## Linter(rubocop)
 Run rubcop:
