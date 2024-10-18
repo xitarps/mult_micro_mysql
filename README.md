@@ -16,7 +16,7 @@ Some decisions has been taken due the problem's scope:
  ```
  docker-compose exec web bash -c "rails notes ANNOTATION=TODO"
  ```
- - Some code structures could offend rubucop, with that in mind, some 'smelly' code was set to fiz it and some cops went disabled... applying i18n whit yml should fix most of these problems
+ - Some code structures could offend rubucop, with that in mind, some 'smelly' code was changed to fit it and some cops went disabled... applying i18n with yml should fix most of these problems
  - My target about the front end of this project was to use top notch techonolies such as HotWire, but with my shortage of time, i still couldn't apply it.
  Still react, vue etc could be integrated by adding minimal configs to docker-compose file, creating the app on the software folder and seeting up cors(rack-cors and it's configuration)
  
