@@ -87,8 +87,6 @@ Lint/DuplicateBranch: # new in 1.3
   Enabled: true
 Lint/DuplicateRegexpCharacterClassElement: # new in 1.1
   Enabled: true
-Lint/EmptyBlock: # new in 1.1
-  Enabled: true
 Lint/EmptyClass: # new in 1.3
   Enabled: true
 Lint/EmptyInPattern: # new in 1.16
@@ -127,8 +125,6 @@ Lint/UselessRuby2Keywords: # new in 1.23
   Enabled: true
 Lint/SafeNavigationChain:
   Enabled: false
-Naming/BlockForwarding: # new in 1.24
-  Enabled: true
 Naming/MemoizedInstanceVariableName:
   Enabled: false
 Security/CompoundHash: # new in 1.28
@@ -301,8 +297,6 @@ Metrics/PerceivedComplexity:
   Enabled: true
 Metrics/CyclomaticComplexity:
   Enabled: true
-Metrics/AbcSize:
-  Enabled: true
 Metrics/ModuleLength:
   Enabled: true
 Gemspec/DevelopmentDependencies: # new in 1.44
@@ -418,4 +412,24 @@ Rails/UnusedRenderContent: # new in 2.21
 Rails/WhereRange: # new in 2.25
   Enabled: true
 Style/ClassAndModuleChildren:
+  Enabled: false
+Style/HashSyntax:
+  Enabled: false
+Naming/VariableNumber:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Lint/MissingSuper:
+  Enabled: false
+Style/HashAsLastArrayItem:
+  Enabled: false
+Naming/BlockForwarding:
+  Enabled: false
+Rails/RedundantForeignKey:
+  Enabled: false
+Rails/InverseOf:
+  Enabled: false
+Style/InverseMethods:
+  Enabled: false
+Lint/EmptyBlock:
   Enabled: false

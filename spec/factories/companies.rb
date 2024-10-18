@@ -5,17 +5,16 @@ FactoryBot.define do
     users { [] }
 
     trait :full_structure do
-      after(:build) do |company, evaluator|
+      after(:build) do |company, _evaluator|
         company.users = [build(:user, :owner, level: 0)]
         company.save
         user = company.users.first
         user.company = company
         user.save
         company.save(validate: false)
-        leadership_level = build(:leadership_level, company: company, users: company.users)
+        build(:leadership_level, company: company, users: company.users)
         company.reload
       end
     end
-
   end
 end

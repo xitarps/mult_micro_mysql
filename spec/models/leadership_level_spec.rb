@@ -6,7 +6,7 @@ RSpec.describe LeadershipLevel, type: :model do
   end
 
   describe 'validations' do
-    subject { build(:leadership_level)  }
+    subject { build(:leadership_level) }
     it { should validate_presence_of(:level) }
   end
 end
