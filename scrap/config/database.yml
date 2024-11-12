@@ -1,0 +1,20 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  socket: /var/run/mysqld/mysqld.sock
+  username: <%= ENV["MYSQL_USER"] %>
+  password: <%= ENV["MYSQL_PASSWORD"] %>
+  host: '<%= ENV['SCRAP_MYSQL_HOST'] %>'
+
+development:
+  <<: *default
+  database: <%= ENV["SCRAP_DEV_DATABASE_NAME"] %>
+
+test:
+  <<: *default
+  database: <%= ENV["SCRAP_TEST_DATABASE_NAME"] %>
+
+production:
+  <<: *default
+  database: <%= ENV["SCRAP_PROD_DATABASE_NAME"] %>

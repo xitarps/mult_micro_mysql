@@ -1,9 +1,0 @@
-queries:
-  users:
-    depth:
-      two: |
-        SELECT users_depth_1.*
-        FROM users users_depth_0
-        INNER JOIN users users_depth_1
-        ON users_depth_1.user_id = users_depth_0.id
-        WHERE users_depth_0.user_id = :leader_id
