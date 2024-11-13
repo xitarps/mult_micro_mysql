@@ -3,7 +3,7 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   socket: /var/run/mysqld/mysqld.sock
-  username: <%= ENV["MYSQL_USER"] %>
+  username: root #<%= ENV["MYSQL_USER"] %>
   password: <%= ENV["MYSQL_PASSWORD"] %>
   host: '<%= ENV['AUTH_MYSQL_HOST'] %>'
 

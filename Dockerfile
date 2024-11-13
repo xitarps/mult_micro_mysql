@@ -3,7 +3,7 @@ from ruby:3.2.1
 RUN apt update
 RUN apt upgrade -y
 
-RUN gem install mysql2
+# RUN gem install mysql2
 
 ADD . /home/apps
 WORKDIR /home/apps

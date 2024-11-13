@@ -3,8 +3,7 @@ class HomeController < ApplicationController
   end
 
   def authenticate
-    binding.irb
-    response = ::Faraday.get('http://178.0.0.2:3001/report')
+    response = ::Faraday.get('http://auth:3001/report')
     @response = response.body
   end
 end

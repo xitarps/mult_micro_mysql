@@ -1,6 +1,10 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  config.hosts << "web:3000"
+  config.hosts << "auth:3001"
+  config.hosts << "notify:3002"
+  config.hosts << "scrap:3003"
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
